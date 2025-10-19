@@ -1,0 +1,225 @@
+# ============================
+# SENSITIVE/CONFIG FILES
+# ============================
+# Never commit database credentials
+config/database.php
+config/config.local.php
+includes/config.local.php
+.env
+.env.local
+*.env
+
+# Database files - COMMIT schema.sql but NOT backups or dumps
+database/backup*.sql
+database/dump*.sql
+database/*_backup.sql
+database/test*.sql
+# Note: database/schema.sql SHOULD be committed!
+
+*.sqlite
+*.db
+
+# ============================
+# USER GENERATED CONTENT
+# ============================
+# User uploads should not be in repo
+uploads/*
+!uploads/.gitkeep
+user_uploads/
+product_images/*
+!product_images/.gitkeep
+temp/
+tmp/
+
+# ============================
+# DEPENDENCIES & PACKAGES
+# ============================
+# PHP Dependencies (if using Composer)
+vendor/
+!vendor/.gitkeep
+composer.phar
+composer.lock
+
+# Node modules (if using npm for frontend)
+node_modules/
+package-lock.json
+yarn.lock
+
+# ============================
+# LOGS & CACHE
+# ============================
+# Log files
+*.log
+logs/*
+!logs/.gitkeep
+error_log
+access_log
+php_error.log
+debug.log
+
+# Cache files
+cache/
+*.cache
+cached_files/
+
+# Session files
+sessions/
+sess_*
+
+# ============================
+# IDE & EDITOR FILES
+# ============================
+# VS Code
+.vscode/
+*.code-workspace
+
+# PHPStorm / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# NetBeans
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+
+# Eclipse
+.project
+.metadata
+.settings/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ============================
+# OPERATING SYSTEM FILES
+# ============================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE_BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+.directory
+.Trash-*
+
+# ============================
+# BUILD & COMPILED FILES
+# ============================
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Compressed files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Minified files (if generating them)
+*.min.css
+*.min.js
+!assets/**/*.min.css
+!assets/**/*.min.js
+
+# ============================
+# BACKUP FILES
+# ============================
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+*.temp
+backup/
+backups/
+*.save
+
+# ============================
+# TESTING
+# ============================
+# PHPUnit
+phpunit.xml
+.phpunit.cache/
+.phpunit.result.cache
+coverage/
+report/
+
+# Testing databases
+test.db
+
+# Test files
+test.php
+test_*.php
+phpinfo.php
+info.php
+_test/
+
+# ============================
+# XAMPP SPECIFIC
+# ============================
+# XAMPP logs and temp files
+xampp/
+*.pid
+
+# ============================
+# SECURITY FILES
+# ============================
+# SSL Certificates (local)
+*.pem
+*.key
+*.crt
+*.csr
+certificates/
+
+# Password files
+passwords.txt
+*.pwd
+
+# ============================
+# PROJECT SPECIFIC - LOCAL DEV
+# ============================
+# Local development/testing files
+local_*.php
+_local/
+_dev/
+
+# Payment gateway test keys
+stripe_test.php
+paypal_config.php
+
+# Documentation builds
+docs/_build/
+docs/.doctrees/

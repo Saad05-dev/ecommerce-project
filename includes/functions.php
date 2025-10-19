@@ -1,0 +1,2 @@
+<?php
+//utility functions
