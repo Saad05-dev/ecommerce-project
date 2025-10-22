@@ -18,6 +18,13 @@ database/test*.sql
 
 *.sqlite
 *.db
+# ============================================================================
+# 🧪 TEST/DEVELOPMENT FILES
+# ============================================================================
+test/
+# Test scripts like create_test_user.php
+# Never push these to production
+
 
 # ============================
 # USER GENERATED CONTENT
