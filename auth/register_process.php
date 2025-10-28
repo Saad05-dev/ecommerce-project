@@ -32,6 +32,16 @@ if($conn->connect_error)
 
 $conn->set_charset($config['charset']);
 
+//Checking if user already exists
+$check = $conn->prepare("SELECT customer_id,first_name from customers where email = ?");
+$check->bind_param("s",$email);
+$check->execute();
+$check_result = $check->get_result();
+if($check_result->num_rows > 0)
+{
+    echo "<script>alert('account already exists!');window.location.href = 'register.php';</script>";
+    exit();
+}
 //Adding new user
 
 $stmt = $conn->prepare("INSERT INTO customers (email, password, first_name, last_name, phone) VALUES (?, ?, ?, ?, ?)");

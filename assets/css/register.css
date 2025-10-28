@@ -61,6 +61,27 @@ span
     font-size: 20px;
     color: var(--text-color);
 }
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    font-size: 20px;
+    pointer-events: none;
+}
+
+.input-wrapper input {
+    padding-right: 40px;
+}
+.input-wrapper input:focus + i {
+    color: #4CAF50; 
+}
 input, select
 {
     height: 40px;
@@ -93,6 +114,26 @@ label[for="phone"]
 {
     display: block;
 }
+label[for="phone"] select
+{
+    width: 30%;
+}
+label[for="phone"] select
+{
+    display: inline-block;
+    width: 30%;
+    height: 40px;
+    vertical-align: top;
+}
+
+label[for="phone"] .input-wrapper
+{
+    display: inline-block;
+    width: 68%;
+    vertical-align: top;
+    margin-left: 1%;
+}
+
 select
 {
     display: inline-block;
